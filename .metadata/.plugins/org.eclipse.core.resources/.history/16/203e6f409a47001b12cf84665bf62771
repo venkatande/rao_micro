@@ -1,0 +1,11 @@
+package ny.wfh.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import ny.wfh.datatransfer.Student;
+
+public interface StudentRepository extends CrudRepository<Student, String>{
+	
+	
+
+}

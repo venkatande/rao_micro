@@ -1,0 +1,45 @@
+package ny.wfh.datatransfer;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Student implements Serializable {
+	
+	@Id
+	private String studentId;
+	private String firstName;
+	private String lastName;
+	
+	public Student() {}
+	public Student(String id,String fName,String lName) {
+		this.studentId=id;
+		this.firstName=fName;
+		this.lastName=lName;
+	}
+	
+	
+	public String getStudentId() {
+		return studentId;
+	}
+	public void setStudentId(String studentId) {
+		this.studentId = studentId;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+	
+
+}
