@@ -11,7 +11,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @EnableDiscoveryClient
 @SpringBootApplication
 public class StudentApplication {
-
+	@LoadBalanced
 	@Bean
 	public RestTemplate getRestTemplate()
 	{

@@ -1,13 +1,13 @@
 ----------------------------------------------------------------
-Sun Dec 27 16:27:17 EST 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0176-a619-2cb4-0000011c1fb8 
-on database directory memory:C:\sts_micro\Course\9aca13d4-d68c-4387-b6b4-dddc84be4348 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4b85612c 
-Loaded from file:/C:/Users/venkateswararao/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+Tue Dec 29 14:27:10 EST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0176-aff7-ee29-000002abca30 
+on database directory memory:/Users/venkatande/javaproj/rao_micro/Course/4227cdbc-1be5-4e0b-926b-86d0b7d39362 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@446cdf90 
+Loaded from file:/Users/venkatande/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=15.0.1+9-18
-user.dir=C:\sts_micro\Course
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
+user.dir=/Users/venkatande/javaproj/rao_micro/Course
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.15.6
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''

@@ -28,7 +28,6 @@ public class StudentController {
 	private RestTemplate restTemplate;
 	@Autowired
 	private WebClient.Builder webClientBuilder;
-	
 	/*@Autowired
 	private DiscoveryClient discoveryClient;
 
@@ -41,10 +40,12 @@ public class StudentController {
 	@RequestMapping("/studentCourses/{studentId}")
 	public List<Course> getStudentCoursesById(@PathVariable String studentId)
 	{
-		CourseList cList= restTemplate.getForObject("http://localhost:8082/courses/student/"+studentId, CourseList.class);
+		/*List<ServiceInstance> instances=serviceInstancesByApplicationName("Course");
+		ServiceInstance instance=instances.get(0);*/
+		CourseList cList= restTemplate.getForObject("http://Course/courses/student/"+studentId, CourseList.class);
 		
-		//CourseList cList=webClientBuilder.build().get().uri("http://Student/courses/student/"+studentId)
-				//.retrieve().bodyToMono(CourseList.class).block();
+		/*CourseList cList=webClientBuilder.build().get().uri(instance.getUri()+"/courses/student/"+studentId)
+				.retrieve().bodyToMono(CourseList.class).block();*/
 		if(cList!=null)return cList.getCourseList();
 		return null;
 	}
