@@ -62,6 +62,7 @@ public class CourseController {
 		return courseService.getCourse(id);
 	}
 	
+	
 	@PostMapping("/courses")
 	public void addCourse(@RequestBody Course course)
 	{
