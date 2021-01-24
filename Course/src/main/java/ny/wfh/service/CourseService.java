@@ -19,7 +19,9 @@ public class CourseService {
 	{
 		List<Course> courseList = new ArrayList<Course>();
 		courseRepository.findAll().forEach(courseList::add);
-		return courseList;
+		/*Course c1=new Course("1","static course name","static course desc");
+		courseList.add(c1);*/
+		return courseList; 
 	}
 	
 	public Course getCourse(String id)

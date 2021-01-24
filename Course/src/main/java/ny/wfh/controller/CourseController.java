@@ -6,25 +6,28 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import ny.wfh.model.Course;
 import ny.wfh.model.CourseList;
 import ny.wfh.service.CourseService;
 
+
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class CourseController {
 	
 	@Autowired
 	CourseService courseService;
-	
 	@RequestMapping("/courses")
-	public List<Course> getCourses()
+	public List<Course> getAllCourses()
 	{
 		return courseService.getAllCourses();
 	}

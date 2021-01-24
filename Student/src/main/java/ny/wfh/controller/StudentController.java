@@ -10,6 +10,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,7 +26,9 @@ import ny.wfh.model.CourseList;
 import ny.wfh.model.Student;
 import ny.wfh.service.StudentService;
 
+
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class StudentController {
 	
 	@Autowired
@@ -42,7 +45,6 @@ public class StudentController {
 			@PathVariable String applicationName) {
 		return this.discoveryClient.getInstances(applicationName);
 	}*/
-	
 	@RequestMapping("/studentCourses/{studentId}")
 	public List<Course> getStudentCoursesById(@PathVariable String studentId)
 	{
